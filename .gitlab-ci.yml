@@ -1,0 +1,8 @@
+image: debian:sid
+
+job_build:
+    script:
+        -   apt update
+        -   apt install -yy qttools5-dev
+        -   qmake
+        -   make
