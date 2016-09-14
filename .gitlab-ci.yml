@@ -3,6 +3,6 @@ image: debian:sid
 job_build:
     script:
         -   apt update
-        -   apt install -yy qttools5-dev
-        -   qmake
+        -   apt install -yy qtchooser qttools5-dev
+        -   qtchooser -run-tool=moc -qt=5
         -   make
